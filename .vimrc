@@ -1,41 +1,6 @@
 call plug#begin("~/.vim/plugged")
 
-"Language Server"
-"Plug 'natebosch/vim-lsc'
-"let g:lsc_server_commands = {
-"            \ "javascript": {
-"            \   "command": "typescript-language-server --stdio",
-"            \   "log_level": -1,
-"            \   "suppress_stderr": v:true,
-"            \ },
-"            \ "typescript": {
-"            \   "command": "typescript-language-server --stdio",
-"            \   "log_level": -1,
-"            \   "suppress_stderr": v:true,
-"            \ },
-"            \ "python": "pyls",
-"            \ "cpp": {
-"            \    "command": "/usr/local/Cellar/llvm/11.0.0_1/bin/clangd",
-"            \    "suppress_stderr": v:true, "            \  }, 
-"            \  "go": {
-"            \    "command": "gopls serve",
-"            \    "log_level": -1,
-"            \    "suppress_stderr": v:true,
-"            \  },
-"            \ }
-"let g:lsc_auto_map = {
-"\  'GoToDefinition': 'gd',
-"\ }
-"let g:lsc_reference_highlights = v:false
-"let g:lsc_enable_diagnostics = v:true
-"let g:lsc_preview_split_direction = "below"
-"let g:lsc_trace_level = 'off'
-"highlight lscDiagnosticError ctermbg=160
-"highlight lscDiagnosticWarning ctermbg=166
-"highlight lscDiagnosticInfo ctermbg=234
-
-
-"LSP Starts"
+"Vim LSP"
 
 " install lua to improve performance (brew install lua)
 
@@ -156,8 +121,6 @@ augroup lsp_install
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
-"LSP Ends"
-
 
 "Markdown"
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
@@ -170,14 +133,6 @@ Plug 'neovimhaskell/haskell-vim'
 
 "Kotline"
 Plug 'udalov/kotlin-vim'
-
-"prettier"
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-"let g:prettier#autoformat = 1
-"let g:prettier#autoformat_require_pragma = 0
-
-"react"
-" Plug 'maxmellon/vim-jsx-pretty'
 
 "tailwind css"
 Plug 'mrdotb/vim-tailwindcss'
